@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Board with Form and Drag-and-Drop (jQuery UI)</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        /* Optional: Add some basic styling for better visualization */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .task-column {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            width: 200px;
+            height: 200px; /* Added a fixed height for visual clarity */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        p {
+            cursor: move; /* Add a move cursor for draggable elements */
+            margin: 0;
+            padding: 5px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="todo" class="task-column">
+        <h3>Todo</h3>
+        <!-- Tasks will be appended here -->
+    </div>
+
+    <div id="doing" class="task-column">
+        <h3>Doing</h3>
+        <!-- Tasks will be appended here -->
+    </div>
+
+    <div id="done" class="task-column">
+        <h3>Done</h3>
+        <!-- Tasks will be appended here -->
+    </div>
+
+    <form id="taskForm">
+        <label for="taskInput">Task:</label>
+        <input type="text" id="taskInput" name="taskInput" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            // Enable dragging for all paragraphs
+            $('p').draggable({
+                cursor: 'move'
+            });
+    
+            // Enable dropping for all task columns
+            $('.task-column').droppable({
+                accept: 'p',
+                drop: function(event, ui) {
+                    // Set the position of the dropped element
+                    ui.helper.css({
+                        top: 0,
+                        left: 0
+                    });
+    
+                    // Append the dropped element to the task column
+                    $(this).append(ui.helper);
+                }
+            });
+    
+            // Form submission handling
+            $('#taskForm').submit(function(event) {
+                event.preventDefault(); // Prevents the default form submission behavior
+    
+                // Get the value from the input field
+                var taskInput = $('#taskInput').val();
+    
+                // Create a new paragraph element
+                var newParagraph = $('<p>').text(taskInput);
+    
+                // Make the new paragraph draggable
+                newParagraph.draggable({
+                    revert: 'invalid',
+                    cursor: 'move'
+                });
+    
+                // Append the new paragraph to the "Todo" column
+                $('#todo').append(newParagraph);
+    
+                // Clear the input field after adding the task
+                $('#taskInput').val('');
+            });
+        });
+    </script>
+    
+</body>
+</html>
