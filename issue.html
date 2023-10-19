@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>DASHMIN - Bootstrap Admin Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta
+            name="keywords"
+            content="project, management, project management, teamplaceholder project ma္nagement"
+        />
+        <meta content name="description" />
+        <meta name="author" content="teamplaceholder's project" />
+
+        <!-- Favicon -->
+        <!-- <link href="/images/favicon.ico" rel="icon"> -->
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- bootstrap icons -->
+        <link rel="stylesheet" href="/font/bootstrap-icons.min.css" />
+
+        <!-- Libraries Stylesheet -->
+        <link
+            href="/lib/owlcarousel/assets/owl.carousel.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/lib/quill/quill.bubble.css" />
+        <link rel="stylesheet" href="/lib/quill/quill.snow.css" />
+        <link rel="stylesheet" href="/lib/quill/quill.core.css" />
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- Template Stylesheet -->
+        <link href="/css/style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="container-fluid position-relative d-flex p-0">
+            <!-- Spinner Start -->
+            <div
+                id="spinner"
+                class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+            >
+                <div
+                    class="spinner-border text-primary"
+                    style="width: 3rem; height: 3rem"
+                    role="status"
+                >
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <!-- Spinner End -->
+
+            <!-- Sidebar Start -->
+            <div class="sidebar pe-4 pb-3">
+                <nav class="navbar navbar-light">
+                    <a href="dashboard.html" class="navbar-brand mx-4 mb-3">
+                        <h3 class="text-primary">
+                            <i class="fa fa-hashtag me-2"></i>DASHMIN
+                        </h3>
+                    </a>
+                    <div class="navbar-nav w-100 gap-2">
+                        <!-- TODO:: GOT TO MAIN/DASHBOARD -->
+                        <a href="dashboard.html" class="nav-item nav-link"
+                            ><i class="bi bi-clipboard-data-fill me-1"></i
+                            >Dashboard</a
+                        >
+                        <!-- TODO :: GOT TO DEPARTMENT LIST -->
+                        <a href="department.html" class="nav-item nav-link"
+                            ><i class="fa-solid fa-building"></i>Department</a
+                        >
+                        <a href="2projects.html" class="nav-item nav-link"
+                            ><i class="bi bi-collection-fill me-1"></i>All
+                            Projects</a
+                        >
+                    </div>
+                </nav>
+            </div>
+            <!-- Sidebar End -->
+
+            <!-- Content Start -->
+            <div
+                class="content"
+                style="
+                    background-color: #e5e5f7;
+                    opacity: 1;
+                    background-image: radial-gradient(
+                        #444cf7 0.6000000000000001px,
+                        #e5e5f7 0.6000000000000001px
+                    );
+                    background-size: 12px 12px;
+                "
+            >
+                <!-- Navbar Start -->
+                <nav
+                    class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0"
+                >
+                    <a href="#" class="sidebar-toggler flex-shrink-0">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="navbar-nav align-items-center ms-auto">
+                        <div class="nav-item dropdown">
+                            <a
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                            >
+                                <i class="fa fa-envelope me-lg-2"></i>
+                                <span class="d-none d-lg-inline-flex"
+                                    >Message</span
+                                >
+                            </a>
+                            <div
+                                class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0"
+                            >
+                                <a href="#" class="dropdown-item">
+                                    <div class="d-flex align-items-center">
+                                        <img
+                                            class="rounded-circle"
+                                            src="https://source.unsplash.com/random/200x200?sig=1"
+                                            alt
+                                            style="width: 40px; height: 40px"
+                                        />
+                                        <div class="ms-2">
+                                            <h6 class="fw-normal mb-0">
+                                                Jhon send you a message
+                                            </h6>
+                                            <small>15 minutes ago</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <hr class="dropdown-divider" />
+                                <a href="#" class="dropdown-item text-center"
+                                    >See all message</a
+                                >
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                            >
+                                <i class="fa fa-bell me-lg-2 position-relative">
+                                    <span
+                                        class="position-absolute top-3 end-0 translate-middle bg-danger border border-light rounded-circle"
+                                        style="padding: 7px"
+                                    >
+                                    </span>
+                                </i>
+                                <span class="d-none d-lg-inline-flex"
+                                    >Notificatin</span
+                                >
+                            </a>
+                            <div
+                                class="dropdown-menu dropdown-menu-end bg-light border-dark rounded-bottom m-0 overflow-auto"
+                                style="height: 200px"
+                            >
+                                <a href="#" class="dropdown-item">
+                                    <h6 class="fw-normal mb-0">
+                                        Profile updated
+                                    </h6>
+                                    <small>15 minutes ago</small>
+                                </a>
+                                <hr class="dropdown-divider" />
+                                <a href="#" class="dropdown-item">
+                                    <h6 class="fw-normal mb-0">
+                                        New user added
+                                    </h6>
+                                    <small>15 minutes ago</small>
+                                </a>
+                                <hr class="dropdown-divider" />
+                                <a href="#" class="dropdown-item">
+                                    <h6 class="fw-normal mb-0">
+                                        Password changed
+                                    </h6>
+                                    <small>15 minutes ago</small>
+                                </a>
+                                <hr class="dropdown-divider" />
+                                <a href="#" class="dropdown-item">
+                                    <h6 class="fw-normal mb-0">
+                                        New user added
+                                    </h6>
+                                    <small>15 minutes ago</small>
+                                </a>
+                                <hr class="dropdown-divider" />
+                                <a href="#" class="dropdown-item">
+                                    <h6 class="fw-normal mb-0">
+                                        New user added
+                                    </h6>
+                                    <small>15 minutes ago</small>
+                                </a>
+                                <hr class="dropdown-divider" />
+                                <a href="#" class="dropdown-item">
+                                    <h6 class="fw-normal mb-0">
+                                        New user added
+                                    </h6>
+                                    <small>15 minutes ago</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                            >
+                                <img
+                                    class="rounded-circle"
+                                    src="https://source.unsplash.com/random/200x200?sig=1"
+                                    alt
+                                    style="width: 40px; height: 40px"
+                                />
+                                <span class="d-none d-lg-inline-flex"
+                                    >John Doe</span
+                                >
+                            </a>
+                            <div
+                                class="dropdown-menu dropdown-menu-end bg-light border-dark rounded-bottom m-0"
+                            >
+                                <a
+                                    href="#"
+                                    class="dropdown-item"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#profile-modal"
+                                    >My Profile</a
+                                >
+                                <!-- <a href="#" class="dropdown-item">Settings</a> -->
+                                <a href="#" class="dropdown-item d-flex gap-1"
+                                    ><i
+                                        class="bi bi-box-arrow-right text-danger"
+                                    ></i
+                                    >Log Out</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Navbar End -->
+
+                <div class="container-fluid">
+                    <div
+                        class="container-fluid d-md-block pt-2 ps-s pe-2"
+                        id="dropdrown-search-bar"
+                    >
+                        <div
+                            class="d-flex flex-row justify-content-between position-relative"
+                        >
+                            <form class="d-md-flex">
+                                <input
+                                    class="form-control border-0"
+                                    type="search"
+                                    placeholder="Search"
+                                />
+                            </form>
+                            <div class="position-absolute end-0 d-flex gap-3">
+                                <!-- modal toggle button start -->
+                                <button
+                                    type="button"
+                                    class="btn btn-light align-self-start"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop"
+                                >
+                                    <i class="bi bi-building-fill-add"></i>
+                                </button>
+                                <!-- modal toggle button end -->
+                                <!-- add department modal start -->
+
+                                <div
+                                    class="modal fade"
+                                    id="staticBackdrop"
+                                    data-bs-backdrop="static"
+                                    data-bs-keyboard="true"
+                                >
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5">
+                                                    Add new Department
+                                                </h1>
+                                                <button
+                                                    type="button"
+                                                    class="btn-close"
+                                                    data-bs-dismiss="modal"
+                                                    aria-label="Close"
+                                                ></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- TODO :: REDESIGN FORM FOR ADDING DEPARTMENT -->
+                                                <form>
+                                                    <div
+                                                        class="form-floating mb-3"
+                                                    >
+                                                        <input
+                                                            type="email"
+                                                            class="form-control"
+                                                            id="floatingInput"
+                                                            placeholder="name@example.com"
+                                                        />
+                                                        <label
+                                                            for="floatingInput"
+                                                            >Email
+                                                            address</label
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="form-floating mb-4"
+                                                    >
+                                                        <input
+                                                            type="password"
+                                                            class="form-control"
+                                                            id="floatingPassword"
+                                                            placeholder="Password"
+                                                        />
+                                                        <label
+                                                            for="floatingPassword"
+                                                            >Password</label
+                                                        >
+                                                    </div>
+                                                    <button
+                                                        type="submit"
+                                                        class="btn btn-primary py-3 w-100 mb-4"
+                                                        id="loign-btn"
+                                                    >
+                                                        Sign In
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- add department modal end -->
+                                <!-- sortting button -->
+                                <i
+                                    class="bi bi-sort-alpha-down sort-btn text-dark"
+                                ></i>
+                            </div>
+
+                            <!-- Modal -->
+                        </div>
+                    </div>
+                    <div class="row row-cols-1">
+                        <div class="p-md-3 p-sm-2">
+                            <div class="card">
+                                <div
+                                    class="card-header border-bottom text-dark"
+                                >
+                                    <div class="col">
+                                        <h4
+                                            class="card-title modal-detail-title"
+                                        >
+                                            Zaw Lin Shein
+                                        </h4>
+                                    </div>
+                                    <div
+                                        class="col issue-time-line d-flex gap-2"
+                                    >
+                                        <div
+                                            class="d-flex align-items-center gap-2"
+                                        >
+                                            <p>Posted</p>
+                                            <span>3 days ago</span>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center gap-2"
+                                        >
+                                            <p>Modified at</p>
+                                            <span>1 minute ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="quill-editor-bubble">
+                                        <p>Hello World!</p>
+                                        <pre>
+&lt;div th:data-el_id="${element.getId()}"&gt; &lt;!-- does not work --&gt;
+&lt;div data-th-el_id="${element.getId()}"&gt; &lt;!-- does not work --&gt;</pre
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-md-3 p-sm-2">
+                            <div class="card">
+                                <div
+                                    class="card-header border-bottom text-dark"
+                                >
+                                    <div class="col">
+                                        <h4
+                                            class="card-title modal-detail-title"
+                                        >
+                                            Zaw Lin Shein
+                                        </h4>
+                                    </div>
+                                    <div
+                                        class="col issue-time-line d-flex gap-2"
+                                    >
+                                        <div
+                                            class="d-flex align-items-center gap-2"
+                                        >
+                                            <p>Posted</p>
+                                            <span>3 days ago</span>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center gap-2"
+                                        >
+                                            <p>Modified at</p>
+                                            <span>1 minute ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="code-block">
+                                        <p>this code does not work help me please</p>
+                                        <pre>&lt;div th:data-el_id="${element.getId()}"&gt; &lt;!-- does not work --&gt;
+&lt;div data-th-el_id="${element.getId()}"&gt; &lt;!-- does not work --&gt;</pre
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content End -->
+
+            <div
+                class="modal fade"
+                id="profile-modal"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Top -->
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+                ><i class="bi bi-arrow-up"></i
+            ></a>
+        </div>
+
+        <!-- fontawesome -->
+        <script src="/js/fontawesome.js"></script>
+
+        <!-- jquery -->
+        <script src="/js/jquery.3.7.1.min.js"></script>
+
+        <!-- datable table -->
+        <script src="/js/databales.min.js"></script>
+
+        <!-- bootstrap -->
+        <script src="/js/bootstrap.bundle.min.js"></script>
+
+        <!-- javascript libraries -->
+        <script src="/lib/chart/chart.min.js"></script>
+        <script src="/lib/easing/easing.min.js"></script>
+        <script src="/lib/waypoints/waypoints.min.js"></script>
+        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/lib/tempusdominus/js/moment.min.js"></script>
+        <script src="/lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="/lib/quill/quill.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="/js/main.js"></script>
+        <script src="/js/forprogresscircleiguess.js"></script>
+
+        <!-- sort (department, project), form validation and search bar behavior are all here -->
+        <script src="/js/custome.js"></script>
+
+        <script>
+            let quillEditors = document.querySelectorAll(
+                ".quill-editor-bubble"
+            );
+
+            let toolbaroptions = [
+                //adding font family
+                [{ font: [] }],
+                //text style
+                ["bold", "italic", "underline", "strike"],
+                //header for text for eg h1, h2,...
+                [{ header: [1, 2, 3, 4, 5, 6, false] }],
+                //bullet point style...
+                [{ list: "ordered" }, { list: "bullet" }],
+                //sub and super script
+                [{ script: "sub" }, { script: "super" }],
+                //indentation
+                [{ indent: "+1" }, { indent: "-1" }],
+                //alignment
+                [{ align: [] }],
+                //text size
+                [{ size: ["small", "large", "huge", false] }],
+                //adding image, link, video, or formula
+                ["image", "link", "video", "formula"],
+                //adding text color and background
+                [{ color: [] }, { background: [] }],
+                //adding code snippet or blockquote
+                ["code-block", "blockquote"],
+            ];
+
+            // Initialize Quill for each selected element
+            quillEditors.forEach(function (editor) {
+                new Quill(editor, {
+                    modules: {
+                        toolbar: toolbaroptions,
+                    },
+                    theme: "snow",
+                });
+            });
+
+            let fullQuillEditor = document.querySelector(".quill-editor-full");
+
+            new Quill(fullQuillEditor, {
+                modules: {
+                    toolbar: toolbaroptions,
+                },
+                theme: "snow",
+            });
+        </script>
+    </body>
+</html>
